@@ -1,5 +1,12 @@
 <?php
 
+$APPTYPE = array(
+    '1' => '管理者画面',
+    '2' => '修了生画面',
+    '3' => '学生画面',
+    '4' => '非学生画面',
+);
+
 $USERTYPE = array(
     '1' => '管理者',
     '2' => '修了生',
@@ -69,5 +76,13 @@ $CERTIFICATION_NUMBER = array(
 
 );
 
-$this->set(compact('USERTYPE','GENDER','GRADE','DEPARTMENT','MAJOR','BUSINESSTYPE','CERTIFICATION_TYPE','CERTIFICATION_NUMBER'));
+$METHODTYPE = array(
+    '1' => 'ログイン',
+    '2' => 'パスワードの変更',
+    '3' => '情報の編集',
+    '4' => '情報の削除',
+    '4' => 'イベントの追加',
+);
+
+$this->set(compact('APPTYPE','USERTYPE','GENDER','GRADE','DEPARTMENT','MAJOR','BUSINESSTYPE','CERTIFICATION_TYPE','CERTIFICATION_NUMBER','METHODTYPE'));
 

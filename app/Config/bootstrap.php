@@ -131,6 +131,14 @@ define('COMPLETION', '2');
 define('STUDENT',    '3');
 define('GENERAL',    '4');
 
+#method_type
+define('LOGIN',      '1');
+define('PASSCHANGE', '2');
+define('INFOCHANGE', '3');
+define('INFODELETE', '4');
+define('IVENTADD',   '5');
+
+
 Configure::write('USERTYPE', $USERTYPE = array(
     '1' => '管理者',
     '2' => '修了生',
