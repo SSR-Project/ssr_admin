@@ -11,7 +11,11 @@ App::uses('AppController', 'Controller');
 class StudentController extends AppController
 {
     public $name = 'Student';
-    public $uses = array('User','Student','UserConfidential');
+    public $uses = array(
+        'User',
+        'Student',
+        'UserConfidential',
+    );
     public $helpers = array('Html', 'Form',);
     public $layout = 'base';
 

@@ -22,13 +22,13 @@
             <tbody>
               <?php for($i = 0; $i < count($users); $i++ ): ?>
               <tr>
-                <td><a href="/<?php echo $base_dir;?>/completion/show/<?php echo h($users[$i]['User']['id']) ?>"><?php echo h($users[$i]['User']['name']) ?></a></td>
-                <td><?php echo h($GENDER[$users[$i]['User']['gender']]) ?></td>
-                <td><?php echo h($users[$i]['User']['birthday']) ?></td>
-                <td><?php echo h($users[$i]['Student']['number']) ?></td>
-                <td><?php echo h($users[$i]['Completion']['completion_day']) ?></td>
-                <td><?php echo h($BUSINESSTYPE[$users[$i]['Completion']['GraduationCourse']['business_type']]) ?></td>
-                <td><?php echo h($users[$i]['Completion']['GraduationCourse']['department']) ?></td>
+                <td><a href="/<?php echo $base_dir;?>/completion/show/<?php echo $users[$i]['User']['id'] ?>"><?php echo h($users[$i]['User']['name']) ?></a></td>
+                <td><?php echo $GENDER[$users[$i]['User']['gender']] ?></td>
+                <td><?php echo $users[$i]['User']['birthday'] ?></td>
+                <td><?php echo $users[$i]['Student']['number'] ?></td>
+                <td><?php echo $users[$i]['Completion']['completion_day'] ?></td>
+                <td><?php echo $BUSINESSTYPE[$users[$i]['Completion']['GraduationCourse']['business_type']] ?></td>
+                <td><?php echo $users[$i]['Completion']['GraduationCourse']['department'] ?></td>
               <tr>
               <?php endfor; ?>
             </tbody>

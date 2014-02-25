@@ -11,8 +11,10 @@ App::uses('AppController', 'Controller');
 class EventController extends AppController {
 
     public $name = 'Event';
-    public $uses = array('Event');
-    public $helpers = array('Html', 'Form');
+    public $uses = array(
+        'Event'
+    );
+    public $helpers = array('Html', 'Form',);
     public $layout = 'base';
 
     /**

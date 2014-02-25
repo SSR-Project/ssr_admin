@@ -23,14 +23,14 @@
             <tbody>
               <?php for($i = 0; $i < count($users); $i++ ): ?>
               <tr>
-                <td><a href="/<?php echo $base_dir;?>/student/show/<?php echo h($users[$i]['User']['id']) ?>"><?php echo h($users[$i]['User']['name']) ?></a></td>
-                <td><?php echo h($GENDER[$users[$i]['User']['gender']]) ?></td>
-                <td><?php echo h($users[$i]['User']['birthday']) ?></td>
-                <td><?php echo h($users[$i]['Student']['number']) ?></td>
-                <td><?php echo h($GRADE[$users[$i]['Student']['grade']]) ?></td>
-                <td><?php echo h($DEPARTMENT[$users[$i]['Student']['department']]) ?></td>
-                <td><?php echo h($MAJOR[$users[$i]['Student']['major']]) ?></td>
-                <td><?php echo h($users[$i]['Student']['entrance_day']) ?></td>
+                <td><a href="/<?php echo $base_dir;?>/student/show/<?php echo $users[$i]['User']['id'] ?>"><?php echo $users[$i]['User']['name'] ?></a></td>
+                <td><?php echo $GENDER[$users[$i]['User']['gender']] ?></td>
+                <td><?php echo $users[$i]['User']['birthday'] ?></td>
+                <td><?php echo $users[$i]['Student']['number'] ?></td>
+                <td><?php echo $GRADE[$users[$i]['Student']['grade']] ?></td>
+                <td><?php echo $DEPARTMENT[$users[$i]['Student']['department']] ?></td>
+                <td><?php echo $MAJOR[$users[$i]['Student']['major']] ?></td>
+                <td><?php echo $users[$i]['Student']['entrance_day'] ?></td>
               <tr>
               <?php endfor; ?>
             </tbody>

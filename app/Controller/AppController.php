@@ -12,7 +12,7 @@ class AppController extends Controller
 {
 
    public $components = array(
-        'DebugKit.Toolbar',
+        // 'DebugKit.Toolbar',
         'Auth' => array(
             'loginAction' => array(
                 'controller' => '/',
@@ -65,19 +65,6 @@ class AppController extends Controller
         // 定数の取得
         require_once(APP . 'Config' . DS . 'constants.php');
 
-
-        //もしもPOSTだった場合はトークンが正規のものか確認
-        if ($this->request->is('post') && !($this->request->action === 'loginCallback' && $this->request->controller === 'users')) {
-            if (!array_key_exists('token', $this->request->data)) {
-                throw new BadRequestException();
-                //echo "POSTを送信する際はトークンも一緒にhiddenパラメタで送って下さい。name=token, value=session_id()を指定して下さい。";
-
-           }
-            if (!$this->Basic->isValidToken($this->request->data['token'])) {
-                throw new BadRequestException();
-                //echo "POSTを送信する際はトークンも一緒にhiddenパラメタで送って下さい。name=token, value=session_id()を指定して下さい。";
-            }
-        }
     }
 
     /**

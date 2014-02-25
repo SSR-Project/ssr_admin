@@ -43,11 +43,12 @@ class AdministratorController extends AppController
             //未だログインしていなかったらフォーム入力値を見てログイン成功／失敗の振り分け
             if (!empty($this->request->data)) {
                 if ($this->Auth->login()) {
-
                     $this->redirect($this->Auth->redirect());
                 } else {
                     if (isset($this->request->data['Administrator']['email']) && isset($this->request->data['Administrator']['password'])) {
                         $this->Administrator->invalidate('login', 'メールアドレスとパスワードの組み合わせが間違っています。');
+                        $loginCount = $this->Session->read('LoginCount');
+                        $this->Session->write('LoginCount', $loginCount + 1);
                     }
                 }
             }
